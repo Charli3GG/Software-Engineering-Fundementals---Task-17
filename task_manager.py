@@ -151,8 +151,8 @@ def add_task():
                 t['username'],
                 t['title'],
                 t['description'],
-                t['due_date'].datetime.strftime(DATETIME_STRING_FORMAT),
-                t['assigned_date'].datetime.strftime(DATETIME_STRING_FORMAT),
+                t['due_date'].strftime(DATETIME_STRING_FORMAT),
+                t['assigned_date'].strftime(DATETIME_STRING_FORMAT),
                 "Yes" if t['completed'] else "No"
             ]
 
