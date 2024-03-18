@@ -66,7 +66,7 @@ def get_valid_numeric_input(
 
 # Add a new user to the user.txt file
 def reg_user():
-    with open("user.txt", "r", encoding = "utf-8") as reg_user_file:
+    with open("user.txt", "r+", encoding = "utf-8") as reg_user_file:
         # - Loop to request input of a new username that does not already exist
         valid_new_user = False
 
@@ -151,8 +151,8 @@ def add_task():
                 t['username'],
                 t['title'],
                 t['description'],
-                t['due_date'].datetime.strftime(DATETIME_STRING_FORMAT),
-                t['assigned_date'].datetime.strftime(DATETIME_STRING_FORMAT),
+                t['due_date'].strftime(DATETIME_STRING_FORMAT),
+                t['assigned_date'].strftime(DATETIME_STRING_FORMAT),
                 "Yes" if t['completed'] else "No"
             ]
 
